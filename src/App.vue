@@ -51,7 +51,7 @@ export default {
     removeNews(id) {
       console.log(id)
       this.news = this.news.filter(i => i.id!==id)
-      fetch('http://localhost:8080/api/rest/news',   {
+      fetch(`http://localhost:8080/api/rest/news/${id}`,   {
         method: 'DELETE',
         headers:{
           "Content-Type": "application/json"
